@@ -11,6 +11,9 @@
       .large-11.columns
         = link_to 'Home', root_url
         |
-        = link_to 'My Account', user_url(User.last.id)
+
+        = link_to 'My Account', ''
+        %p.notice= notice unless notice.blank?
+        %p.alert= alert unless alert.blank?
         = yield
       .large-11.columns
